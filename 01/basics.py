@@ -8,7 +8,6 @@ def wrapper():
     wrapper function
     """
     print(2 + 2)
-    print(2)
     print(2 + 3 * 6)
     print((2 + 3) * 6)
     print(48565878 * 578453)
@@ -52,9 +51,6 @@ def wrapper():
     print(float("3.14"))
     print(float(10))
 
-    spam = input("Enter a number: ")
-    print(spam)
-    spam = int(spam)
     print(spam)
     print(spam * 10 / 5)
     print(float("99.99"))
