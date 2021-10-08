@@ -112,7 +112,6 @@ def wrapper2():
     print(eggs)
     try:
         print(spam(2))
-        print(spam(12))
         print(spam(0))
         print(spam(1))
     except ZeroDivisionError:
@@ -124,7 +123,7 @@ def wrapper2():
         while True:
             print(" " * indent, end="")
             print("********")
-            sleep(randint(0, 9) / 100)
+            sleep(0.01)
             if indent_increasing:
                 indent = indent + 1
                 if indent == 20:
@@ -137,6 +136,21 @@ def wrapper2():
         print("Exiting while loop")
 
 
+def wrapper3(num):
+    """
+    The Collatz Sequence
+    """
+    print(num)
+    if num <= 1:
+        return num
+    if num % 2 == 0:
+        wrapper3(num // 2)
+    elif num % 2 == 1:
+        wrapper3(num * 3 + 1)
+    return 0
+
+
 if __name__ == "__main__":
     wrapper1()
     wrapper2()
+    wrapper3(randint(1, 9 ** 9))
