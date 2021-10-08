@@ -356,7 +356,7 @@ def wrapper7():
                         current_cells[right_coord][yyy],
                         current_cells[left_coord][below_coord],
                         current_cells[xxx][below_coord],
-                        current_cells[right_coord][below_coord]
+                        current_cells[right_coord][below_coord],
                     ]
                 ):
                     num_neighbors += 1
@@ -371,6 +371,29 @@ def wrapper7():
             break
 
 
+def wrapper8():
+    """
+    wrapper function part 8
+    """
+    grid = [
+        [".", ".", ".", ".", ".", "."],
+        [".", "O", "O", ".", ".", "."],
+        ["O", "O", "O", "O", ".", "."],
+        ["O", "O", "O", "O", "O", "."],
+        [".", "O", "O", "O", "O", "O"],
+        ["O", "O", "O", "O", "O", "."],
+        ["O", "O", "O", "O", ".", "."],
+        [".", "O", "O", ".", ".", "."],
+        [".", ".", ".", ".", ".", "."],
+    ]
+    gridt = [
+            "".join([grid[indexr][indexc] for indexr, _ in enumerate(grid)])
+            for indexc, _ in enumerate(grid[0])
+        ]
+    for i in gridt:
+        print("".join(i))
+
+
 if __name__ == "__main__":
     wrapper1()
     wrapper2()
@@ -378,3 +401,5 @@ if __name__ == "__main__":
     wrapper4()
     wrapper5()
     wrapper6()
+    wrapper7()
+    wrapper8()
