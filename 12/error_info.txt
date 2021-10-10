@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\Jeffrey Goh\Documents\repo\py-automate\12\debugging.py", line 49, in wrapper1
+    raise TabError("This is the error message.")
+TabError: This is the error message.
